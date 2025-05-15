@@ -1,0 +1,194 @@
+/* Header principal */
+.header {
+    background-color: #2980b9;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    color: white;
+    font-weight: 600;
+}
+
+/* Container de links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Estilo dos links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b2d4f7;
+}
+
+/* Botão Sair */
+.logout-button {
+    background-color: #1c5980;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #144060;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #f4f7f8;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Container principal para centralizar conteúdo */
+.auth-container, .dashboard-container, div {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Inputs gerais */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 15px 0;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Botões */
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1c5980;
+}
+
+/* Links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem de erro */
+.error-message, p[style*="color: red"] {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 200px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Formulário em UserManagement */
+form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Tabela do UserManagement */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f6f8;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody button {
+    background-color: #e74c3c;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+tbody button:hover {
+    background-color: #c0392b;
+}
+
+/* Layout Geral (pode ajustar se quiser) */
+.dashboard-container, .auth-container {
+    margin-top: 60px;
+}
+

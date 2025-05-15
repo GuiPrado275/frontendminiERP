@@ -1,9 +1,9 @@
 import React from 'react';
-import { useAuth } from '../auth/AuthContext.jsx';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../auth/AuthContext.jsx';
 
 function Layout({ children }) {
-    const { user, logout } = useAuth();
+    const { logout } = useAuth();
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -12,21 +12,21 @@ function Layout({ children }) {
     };
 
     return (
-        <div>
-            <header>
-                <nav>
-                    {user && (
-                        <>
-                            <Link to="/dashboard">Dashboard</Link>
-                            <Link to="/users">Usuários</Link>
-                            <button onClick={handleLogout}>Sair</button>
-                        </>
-                    )}
+        <div className="layout-container">
+            <header className="header">
+                <nav className="nav-links">
+                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/users">Usuários</Link>
                 </nav>
+                <button className="logout-button" onClick={handleLogout}>Sair</button>
             </header>
-            <main>{children}</main>
+
+            <main className="main-content">
+                {children}
+            </main>
         </div>
     );
 }
 
 export default Layout;
+

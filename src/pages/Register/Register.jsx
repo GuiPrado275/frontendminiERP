@@ -4,7 +4,6 @@ import { authService } from '../../auth/authService.jsx';
 
 function Register() {
     const [formData, setFormData] = useState({
-        name: '',
         email: '',
         password: '',
         confirmPassword: ''
@@ -29,13 +28,12 @@ function Register() {
 
         try {
             await authService.register({
-                name: formData.name,
                 email: formData.email,
                 password: formData.password
             });
             navigate('/login');
-        } catch (err) {
-            setError(err.response?.data?.message || 'Erro ao cadastrar');
+        } catch (error) {
+            setError(error.response?.data?.message || 'Erro ao cadastrar');
         }
     };
 
@@ -45,16 +43,6 @@ function Register() {
             {error && <div className="error-message">{error}</div>}
 
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label>Nome:</label>
-                    <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
 
                 <div className="form-group">
                     <label>Email:</label>

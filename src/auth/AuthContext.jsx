@@ -12,11 +12,12 @@ export const AuthProvider = ({ children }) => {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const userData = await authService.getMe();
+                    const userData = await authService.getMe();  // Faz requisição com token no header
                     setUser(userData);
                 } catch (error) {
                     console.error('Falha ao carregar usuário:', error);
                     authService.logout();
+                    setUser(null);
                 }
             }
             setLoading(false);

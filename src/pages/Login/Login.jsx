@@ -14,7 +14,8 @@ function Login() {
         try {
             await login(email, password);
             navigate('/dashboard');
-        } catch (err) {
+        } catch (error) {
+            console.error(error);
             setError('Credenciais inválidas');
         }
     };
